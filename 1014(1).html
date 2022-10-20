@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Web Page</h2>
+<p>My first paragraph.</p>
+
+<script type="text/javascript">
+var d=new Date();
+let name = prompt("您的名字是:");
+let born = prompt("您的出生(民國)年是:");
+let year = d.getFullYear();
+year = parseInt(year);
+let old = year-born-1911;
+console.log(name + "你好！"+"你在民國"+born+"年出生，你今年"+old+"歲！");
+alert(name + "你好！"+"你在民國"+born+"年出生，你今年"+old+"歲！");
+</script>
+
+</body>
+</html> 
