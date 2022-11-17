@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ex-3-2</title>
+    <meta charset="utf-8">
+    <style>
+        div
+        {
+            text-align: center;
+        }
+
+        img.pokemon 
+        {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="display-1"></div>
+    <hr>
+    <div id="display-2"></div>
+    <hr>
+    <div id="display-3"></div>
+    <hr>
+
+    <script>
+        let p1 = "<img src ='" + "pikachu.png" + "' />";
+        let p2 = "<img src ='" + "bulbasaur.png" + "' />";
+        let p3 = "<img src ='" + "charmander.png" + "' />";
+        let p4 = "<img src ='" + "squirtle.png" + "' />";
+
+        f1 = "";
+
+        for(i=0;i<4;i++)
+        {
+            f1 += p1;
+            console.log(f1);
+        }
+        document.getElementById("display-1").innerHTML = f1;
+
+        f2 = "";
+
+        for(i=0;i<16;i++)
+        {
+            if (i%4 == 0) {f2 += "<br>";}
+            if (i<=3) {f2 += p1;}
+            else if (i>=4 && i<=7) {f2 += p2;}
+            else if (i>=8 && i<=11) {f2 += p3;}
+            else {f2 += p4;}
+
+            console.log(f2);
+        }
+        document.getElementById("display-2").innerHTML = f2;
+        
+        f3 = "";
+
+        for(i=0;i<16;i++)
+        {
+            r = 1 + Math.floor(Math.random() * 4);
+
+            if (i%4 == 0) f3 += "<br>";
+            if (r==1) {f3 += p1;}
+            else if (r==2) {f3 += p2;}
+            else if (r==3) {f3 += p3;}
+            else {f3 += p4;}
+
+            console.log(f3);
+        }
+        
+        document.getElementById("display-3").innerHTML = f3;
+
+    </script>
+</body>
+
+</html>
